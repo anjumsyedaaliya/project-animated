@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raam Academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <style>
+  body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+ .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  z-index: 10;
+  background: transparent;
+  box-sizing: border-box;
+}
+.logo 
+{
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img {
+  height: 40px;  
+  width: auto;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: white; 
+}
+.nav-links {
+list-style: none;
+display: flex;
+gap: 1.5rem;
+    }
+
+.nav-links a {
+ text-decoration: none;
+ color: #fff;
+font-weight: 500;
+    }
+.nav-links a:hover {
+color: #f0f0f0;
+}
+.apply-btn {
+  background-color: #1e40af;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+}
+.apply-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.hero {
+  background: url("images/hero-bg.jpg") no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-text h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+.hero-text p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .btn.primary {
+      background-color: #2563eb;
+      color: white;
+    }
+
+    .btn.secondary {
+      border: 2px solid white;
+      color: white;
+      background: transparent;
+    }
+    .why-choose {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.why-choose h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.why-choose p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: 300px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 36px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon.blue {
+  background-color: #e0ecff;
+  color: #1a73e8;
+}
+
+.icon.orange {
+  background-color: #ffe6d6;
+  color: #f57c00;
+}
+
+.icon.green {
+  background-color: #d7fddf;
+  color: #34a853;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 15px;
+  color: #666;
+}
+.courses-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.course-card h3 {
+  font-size: 20px;
+  margin: 15px 10px 10px;
+  font-weight: 700;
+}
+
+.course-card p {
+  font-size: 15px;
+  margin: 0 10px 15px;
+  color: #444;
+}
+
+.course-card a {
+  display: block;
+  margin-bottom: 20px;
+  color: #0066ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer {
+  background-color: #0b1120;
+  color: #fff;
+  padding: 40px 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #1a1f2f;
+  padding-bottom: 30px;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 260px;
+  margin-right: 40px;
+}
+
+.footer-left h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-left p {
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  color: #ccc;
+  margin-right: 12px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+/* Footer right columns */
+.footer-columns {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 300px;
+}
+
+.footer-column {
+  min-width: 180px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-column a,
+.footer-column p {
+  display: block;
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.footer-column p i {
+  margin-right: 8px;
+}
+
+/* Bottom row */
+.footer-bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer-bottom-right a {
+  margin-left: 20px;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-right a:hover {
+  color: #fff;
+}
+
+</style>
+  </head>
+<body>
+
+  <header class="navbar">
+    <div class="logo-container">
+  <img src="images/raam-logo.png" alt="RAAM Academy Logo" />
+  <span class="brand-name">RAAM Academy</span>
+</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="apply.html" class="apply-btn">Apply Now</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Empowering Futures<br>Through Technology</h1>
+      <p>At RAAM Academy, we provide cutting-edge education in AI/ML, Robotics, Data Science, and more to prepare you for the careers of tomorrow.</p>
+      <div class="btn-group">
+        <a href="courses.html" class="btn primary">Explore Courses</a>
+        <a href="about.html" class="btn secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+  <section id="why-choose" class="why-choose">
+  <h2>Why Choose RAAM Academy</h2>
+  <p>We're committed to providing cutting-edge education that prepares you for the future.</p>
+  
+  <div class="features">
+    <div class="feature-card">
+      <div class="icon blue"><i class="fas fa-lightbulb"></i></div>
+      <h3>Ikigai</h3>
+      <p>Help students discover their passions, strengths and core values through the IKIGAI methodology by bridging the gap between essential life and career skills.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon orange"><i class="fas fa-rocket"></i></div>
+      <h3>Hands-on Learning</h3>
+      <p>Our teaching methodology focuses on practical, project-based learning that gives you real-world experience.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon green"><i class="fas fa-globe"></i></div>
+      <h3>Redefinition</h3>
+      <p>Redefine education as a journey of self discovery not just limited to academic achievement.</p>
+    </div>
+  </div>
+</section>
+<section id="featured-courses" class="courses-section">
+  <h2>Our Featured Courses</h2>
+  <p>Foster a culture where curiosity, creativity and purpose drive both personal and professional growth.</p>
+
+ <div class="course-grid">
+   <div class="course-card">
+      <img src="images/ai.jpg" alt="AI Course">
+      <h3>Artificial Intelligence & Machine Learning</h3>
+      <p>Learn to develop AI systems and machine learning models to solve complex problems.</p>
+      <a href="#">Learn more →</a>
+    </div>
+ <div class="course-card">
+      <img src="images/robotics.jpg" alt="Robotics Course">
+      <h3>Robotics</h3>
+      <p>Design, build and program robots for automation and solving real-world challenges.</p>
+      <a href="#">Learn more →</a>
+    </div>
+ <div class="course-card">
+      <img src="images/data-science.jpg" alt="Data Science Course">
+      <h3>Data Science</h3>
+      <p>Analyze complex data sets to extract knowledge and insights for informed decision-making.</p>
+      <a href="#">Learn more →</a>
+    </div>
+<div class="course-card">
+      <img src="images/soft-skills.jpg" alt="Soft Skills Course">
+      <h3>Soft Skills Training</h3>
+      <p>Develop essential communication, leadership, and teamwork skills for professional success.</p>
+      <a href="#">Learn more →</a>
+    </div>
+<div class="course-card">
+      <img src="images/python.jpg" alt="Python Programming Course">
+      <h3>Python Programming</h3>
+      <p>Master the fundamentals of Python programming for web development, data analysis, and automation.</p>
+      <a href="#">Learn more →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h3><i class="fas fa-book-open"></i> RAAM Academy</h3>
+      <p>Allow your passion to become your purpose and it will one day become your profession.</p>
+     <div class="social-icons">
+        <a href="https://www.linkedin.com/company/raamacademyglobal/posts/?feedView=all" target="_blank">
+      <i class="fab fa-linkedin"></i> </a>
+    <a href="https://m.facebook.com/61575919680431/" target="_blank">
+     <i class="fab fa-facebook"></i>  </a>
+    <a href="https://www.instagram.com/raam_academy?igsh=MW5jOThvcXI2NGx3Mw==" target="_blank">
+       <i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@raamacademy" target="_blank">
+      <i class="fab fa-youtube"></i></a>
+    </div>
+    </div>
+
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Courses</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-column">
+        <h4>Our Courses</h4>
+        <a href="#">AI/ML</a>
+        <a href="#">Robotics</a>
+        <a href="#">Data Science</a>
+        <a href="#">Soft Skills Training</a>
+        <a href="#">Python</a>
+      </div>
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 23, Kamarajar Road (Near Ragland School),<br> Satchiyapuram, Sivakasi - 626124</p>
+        <p><i class="fas fa-phone-alt"></i> +91 75581 75875</p>
+        <p><i class="fas fa-envelope"></i> raamacademy.global@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      <p>© 2025 RAAM Academy. All rights reserved.</p>
+    </div>
+    <div class="footer-bottom-right">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
